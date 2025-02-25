@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Recorder</title>
+</head>
+<body>
+    <h1>Screen Recorder</h1>
+    <button onclick="startRecording()">Start Recording</button>
+    <button onclick="stopRecording()">Stop Recording</button>
+    <script>
+        function startRecording() {
+            fetch('/start', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => alert(data.message));
+        }
+        function stopRecording() {
+            fetch('/stop', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => alert(data.message));
+        }
+    </script>
+</body>
+</html>
