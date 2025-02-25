@@ -1,0 +1,8 @@
+flask
+opencv-python
+numpy
+pyautogui
+sounddevice
+wave
+ffmpeg-python
+queue
